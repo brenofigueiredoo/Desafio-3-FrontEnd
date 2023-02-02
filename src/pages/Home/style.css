@@ -1,0 +1,101 @@
+.mainHome {
+    background-image: url("https://images3.alphacoders.com/563/563119.jpg");
+    background-position: inherit;
+    background-repeat: repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.divMain {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divHeader {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.buttonLogout {
+    width: 60px;
+    height: 30px;
+
+    border-radius: 16px;
+    background-color: transparent;
+    border: #ffff 1px solid;
+    cursor: pointer;
+    color: #ffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buttonAddContact {
+    width: 120px;
+    height: 30px;
+
+    border-radius: 16px;
+    background-color: transparent;
+    border: #ffff 1px solid;
+    cursor: pointer;
+    color: #ffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.h3Contacts {
+    color: #ffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid;
+    color: #ffff;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+th[scope='col'] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope='row'] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+
+.buttonEditDelete {
+    background-color: transparent;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    cursor: pointer;
+}

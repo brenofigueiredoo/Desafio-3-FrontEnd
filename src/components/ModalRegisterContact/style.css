@@ -1,0 +1,58 @@
+.divModalCreate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50;
+    left: 50;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
+    border: 1px solid #fff;
+
+    width: 400px;
+    height: 240px;
+}
+
+.divModalCreate h3 {
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+
+}
+
+.divButtons button {
+    width: 80px;
+    height: 40px;
+    max-width: 500px;
+    border-radius: 18px;
+    background-color: transparent;
+    color: #ffff;
+    border: #ffff 1px solid;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.formModalCreate input {
+    height: 30px;
+    width: 220px;
+    border-radius: 18px;
+    background-color: #ffff;
+}
+
+.formModalCreate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 5px;
+}
+
+.divButtons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
