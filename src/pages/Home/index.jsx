@@ -53,26 +53,29 @@ const HomePage = () => {
                         <th>Telefone</th>
                     </tr>
                 </tbody>
-               {contacts === undefined ? <h3>Ola</h3> : contacts.map(({id, name, email, phone}, index) => {  
+               {contacts && contacts.map(({id, name, email, phone}, index) => {  
                 return (
-                    <tr key={index}>
-                        <td>{name}</td>
-                        <td>{email}</td>
-                        <td>{phone}</td>
-                        <td><button className="buttonEditDelete" onClick={() => getModal(id)}>Editar</button></td>
-                        <td><button className="buttonEditDelete" onClick={() => api
-                                .delete(`/contacts/${id}`, {
-                                    headers: { Authorization: `Bearer ${token}` },
-                                })
-                                .then((res) => {
-                                    console.log(res);
-                                    toast.success("Contato deletado!");
-                                })
-                                .catch((err) => {
-                                    console.log(err);
-                                    toast.error("Erro ao deletar!")
-                                })}>Apagar</button></td>
-                    </tr>
+                    <tbody key={index}>
+                        <tr>
+                            <td>{name}</td>
+                            <td>{email}</td>
+                            <td>{phone}</td>
+                            <td><button className="buttonEditDelete" onClick={() => getModal(id)}>Editar</button></td>
+                            <td><button className="buttonEditDelete" onClick={() => api
+                                    .delete(`/contacts/${id}`, {
+                                        headers: { Authorization: `Bearer ${token}` },
+                                    })
+                                    .then((res) => {
+                                        console.log(res);
+                                        toast.success("Contato deletado!");
+                                    })
+                                    .catch((err) => {
+                                        console.log(err);
+                                        toast.error("Erro ao deletar!")
+                                    })}>Apagar</button></td>
+                        </tr>
+                    </tbody>
+                        
                 )
                })}
             </table>

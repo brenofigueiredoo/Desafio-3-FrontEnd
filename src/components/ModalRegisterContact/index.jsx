@@ -31,8 +31,8 @@ const ModalRegisterContact = () => {
             setIsModalAdd(false)
           })
           .catch((err) => {
-            err.response.data.message === "this client already exists" &&
-              toast.error("Email já cadastrado");
+            err.response.data.message === "Contact is already registered" &&
+              toast.error("Contato já cadastrado");
           });
       };
 

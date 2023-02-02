@@ -17,7 +17,6 @@ const ModalEditContact = () => {
         name: yup.string(),
         email: yup.string().email("Email inválido"),
         phone: yup.string(),
-        // phone: yup.string().min(11, 'Deve conter 11 dígitos').max(11, 'Deve conter 11 dígitos'),
     });
 
     const onUpdate = (data) => {
@@ -37,12 +36,12 @@ const ModalEditContact = () => {
           })
           .then((res) => {
             console.log(res);
-            toast.success("Contato cadastrado com sucesso");
+            toast.success("Contato atualizado!");
             setIsModal(false)
           })
           .catch((err) => {
             console.log(err);
-            toast.error("Erro ao cadastrar")
+            toast.error("Erro ao atualizar!")
           });
       };
 
