@@ -11,6 +11,7 @@ const HomePage = () => {
     const {setAuthToken, setIsModal, isModal, setIdContact, isModalAdd, setIsModalAdd} = useContext(Context)
 
     const [contacts, setContacts] = useState()
+    const [deleteContact, setDeleteContact] = useState()
 
     const token = localStorage.getItem("authToken")
     
@@ -26,7 +27,7 @@ const HomePage = () => {
         api.get("/contacts", {headers: {Authorization: `Bearer ${token}`}}).then(res => {
             setContacts(res.data)
         }).catch(err => console.log(err))
-    }, [contacts, isModal, isModalAdd])
+    }, [deleteContact, isModal, isModalAdd])
 
     const getModal = (id) => {
         setIsModal(true)
@@ -67,7 +68,9 @@ const HomePage = () => {
                                     })
                                     .then((res) => {
                                         console.log(res);
+                                        setDeleteContact("")
                                         toast.success("Contato deletado!");
+                                        setDeleteContact("Deleted")
                                     })
                                     .catch((err) => {
                                         console.log(err);

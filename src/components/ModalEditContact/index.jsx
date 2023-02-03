@@ -41,7 +41,10 @@ const ModalEditContact = () => {
           })
           .catch((err) => {
             console.log(err);
-            toast.error("Erro ao atualizar!")
+            if(err.response.data.message === "Contact already exists") {
+                toast.error("Contato já cadastrado!")
+            }
+            // toast.error("Erro ao atualizar!")
           });
       };
 
